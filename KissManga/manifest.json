@@ -1,0 +1,12 @@
+{
+    "manifest_version": 2,
+   
+    "name": "KissManga Remove Script",
+    "version": "0.1.0",
+    "description": "KissManga Remove Script",
+   
+    "content_scripts": [{
+      "js": ["removeScript.js"],
+      "matches": ["http://kissmanga.com/*"]
+    }]   
+  }
