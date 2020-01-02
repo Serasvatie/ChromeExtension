@@ -7,6 +7,6 @@
    
     "content_scripts": [{
       "js": ["removeScript.js"],
-      "matches": ["http://kissmanga.com/*"]
+      "matches": ["https://kissmanga.com/*"]
     }]   
   }

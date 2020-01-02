@@ -5,7 +5,28 @@ Array.prototype.forEach.call(scriptToRemove, child => {
     {
         child.textContent = "";
     }
-})
+});
+
+scriptToRemove = document.getElementById("mdns_async_script_unique_923");
+console.log("start");
+console.log(scriptToRemove);
+Array.prototype.forEach.call(scriptToRemove, child => {
+    console.log("Start To Check");
+    if (MatchImageUrlGetter(child))
+    {
+        console.log("InMatch");
+        var res = child.src.split("&");
+        if (res[2].includes("wu=https%3A%2F%2Fkissmanga.com%2FManga"))
+        {
+            child.src = res[2].slice(3);
+        }
+    }
+});
+
+function MatchImageUrlGetter(script) 
+{
+    return script.src.includes("//ads.2mdnsys.com/html");
+}
 
 function MatchScript(script)
 {
